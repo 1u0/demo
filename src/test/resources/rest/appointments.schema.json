@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "results",
+    "errors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "firstName",
+          "lastName",
+          "appointmentsByLocation"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "examples": [
+              "Betty"
+            ]
+          },
+          "lastName": {
+            "type": "string",
+            "examples": [
+              "Mosciski"
+            ]
+          },
+          "appointmentsByLocation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "locationName",
+                "appointments"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "locationName": {
+                  "type": "string",
+                  "examples": [
+                    "Kansas City Medical Centre"
+                  ]
+                },
+                "appointments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "appointmentId",
+                      "startDateTime",
+                      "service"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "appointmentId": {
+                        "type": "string",
+                        "examples": [
+                          "8b5df407-b495-435a-8204-4e735f666888"
+                        ]
+                      },
+                      "startDateTime": {
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "2020-01-16T11:01:00Z"
+                        ],
+                        "format": "date-time"
+                      },
+                      "service": {
+                        "type": "object",
+                        "required": [
+                          "serviceName",
+                          "price"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "serviceName": {
+                            "type": "string",
+                            "examples": [
+                              "X-Ray"
+                            ]
+                          },
+                          "price": {
+                            "type": "string",
+                            "examples": [
+                              "8548"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "examples": [
+              "schema"
+            ]
+          },
+          "message": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "#/location/name: expected type: String, found: Null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
