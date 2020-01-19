@@ -1,0 +1,53 @@
+[
+  {
+    "doctor": {
+      "firstName": "Bret",
+      "lastName": "Ortiz"
+    },
+    "durationInMinutes": 5,
+    "time": "2020-01-16 03:44:00",
+    "service": {
+      "name": "Counselling",
+      "price": 2672
+    },
+    "location": {
+      "name": "Kansas City Care",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "b11e0ba5-53d1-4d58-8c51-5e3c15bfb560"
+  },
+  {
+    "doctor": {
+      "firstName": "Salvador",
+      "lastName": "Flatley"
+    },
+    "durationInMinutes": 12,
+    "time": "2020-01-16 09:47:00",
+    "service": {
+      "name": "Physiotherapy consultation",
+      "price": 9832
+    },
+    "location": {
+      "name": "Wichita rehabilitation center",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "0059a3a5-069e-4283-b150-4c5196273a29"
+  },
+  {
+    "doctor": {
+      "firstName": "Bret",
+      "lastName": "Ortiz"
+    },
+    "durationInMinutes": 10,
+    "time": "2020-01-16 03:44:00",
+    "service": {
+      "name": "X-Ray",
+      "price": 8548
+    },
+    "location": {
+      "name": "KC Doctors",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "8ec28eba-64ae-46ad-89bb-072daf06d7e2"
+  }
+]

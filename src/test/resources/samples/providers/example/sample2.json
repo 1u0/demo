@@ -1,0 +1,70 @@
+[
+  {
+    "doctor": {
+      "firstName": "Betty",
+      "lastName": "Mosciski"
+    },
+    "durationInMinutes": 14,
+    "time": "2020-01-16 05:01:00",
+    "service": {
+      "name": "X-Ray",
+      "price": 8548
+    },
+    "location": {
+      "name": "Kansas City Medical Centre",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "8b5df407-b495-435a-8204-4e735f666888"
+  },
+  {
+    "doctor": {
+      "firstName": "Betty",
+      "lastName": "Mosciski"
+    },
+    "durationInMinutes": 10,
+    "time": "2020-01-16 05:01:00",
+    "service": {
+      "name": "Discolored butthole flaps inspection",
+      "price": 3415
+    },
+    "location": {
+      "name": "Kansas City Medical Centre",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "ffbeacbd-4196-459a-bb30-e45c274613ee"
+  },
+  {
+    "doctor": {
+      "firstName": "Betty",
+      "lastName": "Mosciski"
+    },
+    "durationInMinutes": 9,
+    "time": "2020-01-16 05:01:00",
+    "service": {
+      "name": "Physiotherapy consultation",
+      "price": 9832
+    },
+    "location": {
+      "name": "Kansas City Care",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "5c357963-f3fe-4541-86d5-b607be9739e9"
+  },
+  {
+    "doctor": {
+      "firstName": "Betty",
+      "lastName": "Mosciski"
+    },
+    "durationInMinutes": 7,
+    "time": "2020-01-16 05:01:00",
+    "service": {
+      "name": "Teeth cleaning",
+      "price": 6815
+    },
+    "location": {
+      "name": "Wichita rehabilitation center",
+      "timeZoneCode": "America/Chicago"
+    },
+    "id": "90b41d63-c7a0-4e3c-9657-f6d1a6fd36ee"
+  }
+]
