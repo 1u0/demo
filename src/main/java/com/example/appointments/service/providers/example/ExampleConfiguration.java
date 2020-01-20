@@ -5,15 +5,22 @@ import com.example.appointments.util.json.SchemaUtil;
 import org.everit.json.schema.Schema;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 
 @Configuration
 public class ExampleConfiguration {
+
+    @Bean
+    public RestTemplate exampleRestTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
 
     @Bean
     public DateTimeFormatter exampleDateTimeFormatter() {
