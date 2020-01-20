@@ -14,7 +14,7 @@ public class SchemaUtil {
                 .schemaJson(new JSONTokener(inputStream).nextValue())
                 .enableOverrideOfBuiltInFormatValidators();
 
-        for (FormatValidator formatValidator: formatValidators) {
+        for (FormatValidator formatValidator : formatValidators) {
             schemaLoader.addFormatValidator(formatValidator);
         }
 

@@ -19,7 +19,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 @RestClientTest(ExampleAppointmentsGateway.class)
-@AutoConfigureWebClient(registerRestTemplate=true)
+@AutoConfigureWebClient(registerRestTemplate = true)
 class ExampleAppointmentsGatewayTest {
 
     @Autowired

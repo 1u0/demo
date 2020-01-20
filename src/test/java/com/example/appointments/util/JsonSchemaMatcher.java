@@ -7,7 +7,6 @@ import org.hamcrest.TypeSafeDiagnosingMatcher;
 import org.json.JSONException;
 import org.json.JSONTokener;
 
-import java.util.List;
 import java.util.Optional;
 
 public class JsonSchemaMatcher extends TypeSafeDiagnosingMatcher<String> {

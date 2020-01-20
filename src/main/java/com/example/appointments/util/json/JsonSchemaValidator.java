@@ -3,9 +3,6 @@ package com.example.appointments.util.json;
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.ValidationException;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
 
 public class JsonSchemaValidator {
