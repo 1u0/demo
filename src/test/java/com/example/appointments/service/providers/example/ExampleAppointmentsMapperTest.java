@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +43,7 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "b11e0ba5-53d1-4d58-8c51-5e3c15bfb560",
                                                         Instant.parse("2020-01-16T09:44:00Z"),
+                                                        Duration.ofMinutes(5),
                                                         new ServiceDto("Counselling", "2672"))
                                         )),
                                 new AppointmentsByLocationDto(
@@ -50,6 +52,7 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "8ec28eba-64ae-46ad-89bb-072daf06d7e2",
                                                         Instant.parse("2020-01-16T09:44:00Z"),
+                                                        Duration.ofMinutes(10),
                                                         new ServiceDto("X-Ray", "8548"))
                                         ))
                         )),
@@ -63,6 +66,7 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "0059a3a5-069e-4283-b150-4c5196273a29",
                                                         Instant.parse("2020-01-16T15:47:00Z"),
+                                                        Duration.ofMinutes(12),
                                                         new ServiceDto("Physiotherapy consultation", "9832"))))
                         ))
         ));
@@ -84,10 +88,12 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "8b5df407-b495-435a-8204-4e735f666888",
                                                         Instant.parse("2020-01-16T11:01:00Z"),
+                                                        Duration.ofMinutes(14),
                                                         new ServiceDto("X-Ray", "8548")),
                                                 new AppointmentDto(
                                                         "ffbeacbd-4196-459a-bb30-e45c274613ee",
                                                         Instant.parse("2020-01-16T11:01:00Z"),
+                                                        Duration.ofMinutes(10),
                                                         new ServiceDto("Discolored butthole flaps inspection", "3415"))
                                         )),
                                 new AppointmentsByLocationDto(
@@ -96,6 +102,7 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "5c357963-f3fe-4541-86d5-b607be9739e9",
                                                         Instant.parse("2020-01-16T11:01:00Z"),
+                                                        Duration.ofMinutes(9),
                                                         new ServiceDto("Physiotherapy consultation", "9832"))
                                         )),
                                 new AppointmentsByLocationDto(
@@ -104,6 +111,7 @@ class ExampleAppointmentsMapperTest {
                                                 new AppointmentDto(
                                                         "90b41d63-c7a0-4e3c-9657-f6d1a6fd36ee",
                                                         Instant.parse("2020-01-16T11:01:00Z"),
+                                                        Duration.ofMinutes(7),
                                                         new ServiceDto("Teeth cleaning", "6815"))
                                         ))
                         ))

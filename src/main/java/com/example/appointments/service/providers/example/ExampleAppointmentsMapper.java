@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -56,12 +57,17 @@ class ExampleAppointmentsMapper {
         return new AppointmentDto(
                 appointment.getString("id"),
                 mapDateTime(appointment.getString("time"), appointment.getJSONObject("location").getString("timeZoneCode")),
+                mapDuration(appointment.getLong("durationInMinutes")),
                 mapService(appointment.getJSONObject("service")));
     }
 
     private Instant mapDateTime(String dateTime, String timeZoneCode) {
         ZoneId zoneId = ZoneId.of(timeZoneCode);
         return LocalDateTime.parse(dateTime, dateTimeFormatter).atZone(zoneId).toInstant();
+    }
+
+    private Duration mapDuration(long durationInMinutes) {
+        return Duration.ofMinutes(durationInMinutes);
     }
 
     private static ServiceDto mapService(JSONObject service) {
