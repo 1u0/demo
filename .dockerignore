@@ -1,0 +1,3 @@
+# Exclude everything by default. List only things that we need to build the docker image.
+*
+!target/appointments-facade-*.jar
