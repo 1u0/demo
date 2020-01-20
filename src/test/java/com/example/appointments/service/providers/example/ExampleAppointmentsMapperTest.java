@@ -4,13 +4,12 @@ import com.example.appointments.model.AppointmentDto;
 import com.example.appointments.model.AppointmentsByLocationDto;
 import com.example.appointments.model.DoctorAppointmentsDto;
 import com.example.appointments.model.ServiceDto;
+import com.example.appointments.util.JsonUtil;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -119,9 +118,8 @@ class ExampleAppointmentsMapperTest {
     }
 
     public static List<JSONObject> json(String resourcePath) throws IOException {
-        Object json = new JSONTokener(new ClassPathResource(resourcePath).getInputStream()).nextValue();
         List<JSONObject> results = new ArrayList<>();
-        for (Object element : (JSONArray) json) {
+        for (Object element : (JSONArray) JsonUtil.loadJson(resourcePath)) {
             results.add((JSONObject) element);
         }
         return results;

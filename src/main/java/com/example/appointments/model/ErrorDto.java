@@ -6,6 +6,6 @@ import java.util.List;
 
 @Value
 public class ErrorDto {
-    public String type;
-    public List<String> message;
+    ErrorType type;
+    List<String> message;
 }

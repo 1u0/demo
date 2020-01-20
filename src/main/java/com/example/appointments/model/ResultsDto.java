@@ -6,6 +6,6 @@ import java.util.List;
 
 @Value
 public class ResultsDto<T> {
-    public List<T> results;
-    public List<ErrorDto> errors;
+    List<T> results;
+    List<ErrorDto> errors;
 }

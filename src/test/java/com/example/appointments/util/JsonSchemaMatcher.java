@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONTokener;
 
 import java.util.List;
+import java.util.Optional;
 
 public class JsonSchemaMatcher extends TypeSafeDiagnosingMatcher<String> {
     private final JsonSchemaValidator schemaValidator;
@@ -30,9 +31,9 @@ public class JsonSchemaMatcher extends TypeSafeDiagnosingMatcher<String> {
             mismatchDescription.appendText(e.getMessage());
             return false;
         }
-        List<String> errors = schemaValidator.validate(json);
-        if (!errors.isEmpty()) {
-            mismatchDescription.appendValueList("", "\n", "", errors);
+        Optional<String> error = schemaValidator.validate(json);
+        if (error.isPresent()) {
+            mismatchDescription.appendText(error.get());
             return false;
         }
         return true;

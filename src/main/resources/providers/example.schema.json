@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "id",
+    "doctor",
+    "durationInMinutes",
+    "time",
+    "service",
+    "location"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "examples": [
+        "b11e0ba5-53d1-4d58-8c51-5e3c15bfb560"
+      ]
+    },
+    "doctor": {
+      "$id": "#/properties/doctor",
+      "type": "object",
+      "title": "The Doctor Schema",
+      "required": [
+        "firstName",
+        "lastName"
+      ],
+      "properties": {
+        "firstName": {
+          "$id": "#/properties/doctor/properties/firstName",
+          "type": "string"
+        },
+        "lastName": {
+          "$id": "#/properties/doctor/properties/lastName",
+          "type": "string"
+        }
+      }
+    },
+    "durationInMinutes": {
+      "$id": "#/properties/durationInMinutes",
+      "type": "integer",
+      "minimum": 0
+    },
+    "time": {
+      "$id": "#/properties/time",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2020-01-16 03:44:00"
+      ]
+    },
+    "service": {
+      "$id": "#/properties/service",
+      "type": "object",
+      "title": "The Service Schema",
+      "required": [
+        "name",
+        "price"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/service/properties/name",
+          "type": "string",
+          "examples": [
+            "Counselling"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "price": {
+          "$id": "#/properties/service/properties/price",
+          "type": "integer",
+          "minimum": 0,
+          "examples": [
+            2672
+          ]
+        }
+      }
+    },
+    "location": {
+      "$id": "#/properties/location",
+      "type": "object",
+      "title": "The Location Schema",
+      "required": [
+        "name",
+        "timeZoneCode"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/location/properties/name",
+          "type": "string",
+          "examples": [
+            "Kansas City Care"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "timeZoneCode": {
+          "$id": "#/properties/location/properties/timeZoneCode",
+          "type": "string",
+          "examples": [
+            "America/Chicago"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}
